@@ -1,0 +1,114 @@
+@use "../abstracts/abstracts" as abs;
+
+.hero {
+  margin-top: 100px;
+  width: 800px;
+  position: relative;
+  margin-bottom: 90px;
+  &::before {
+    content: "";
+    background-image: url(../../img/beauty-woman-skin-care-beautiful-female-hand-touch-8B5MWG9\ 1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 1400px;
+    height: 800px;
+    right: -850px;
+    top: -130px;
+    position: absolute;
+    z-index: -1;
+  }
+  &__title {
+    font-size: 64px;
+    color: abs.$dark-blue;
+  }
+  &__description {
+    margin-top: 30px;
+    font-size: 24px;
+    color: abs.$gray;
+    margin-bottom: 57px;
+  }
+  &__button {
+    transition: all 0.2s ease;
+    @include abs.button();
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+      color: black;
+    }
+  }
+  &__video {
+    transition: all 0.2s ease;
+    margin-left: 112px;
+    color: abs.$dark-blue;
+    text-decoration: none;
+    position: relative;
+    &:hover {
+      text-decoration: underline;
+      color: black;
+    }
+    &::before {
+      content: "";
+      background-image: url(../../img/play.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      left: -60px;
+      top: -12px;
+    }
+  }
+}
+
+.numbers {
+  display: flex;
+  padding: 10px;
+  gap: 72px;
+  & .treatment {
+    text-align: center;
+    width: 140px;
+    &__image {
+      margin-bottom: 24px;
+    }
+    &__title {
+      color: abs.$dark-blue;
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+    &__description {
+      color: abs.$gray;
+    }
+  }
+  & .therapist {
+    text-align: center;
+    width: 140px;
+    &__image {
+      margin-bottom: 24px;
+    }
+    &__title {
+      color: abs.$dark-blue;
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+    &__description {
+      color: abs.$gray;
+    }
+  }
+  & .formula {
+    text-align: center;
+    width: 140px;
+    &__image {
+      margin-bottom: 24px;
+    }
+    &__title {
+      color: abs.$dark-blue;
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+    &__description {
+      color: abs.$gray;
+    }
+  }
+}

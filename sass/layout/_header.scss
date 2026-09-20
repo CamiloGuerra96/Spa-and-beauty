@@ -1,0 +1,85 @@
+@use "../abstracts/abstracts" as abs;
+
+header {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    background-color: abs.$background-cyan;
+    width: 35%;
+    height: 820px;
+    position: absolute;
+    right: -80px;
+    top: -15px;
+    z-index: -2;
+  }
+  .logo {
+    font-size: 36px;
+  }
+  ul {
+    display: flex;
+    gap: 56px;
+    list-style: none;
+    &::after {
+      content: "";
+      background-image: url(../../img/chevron-down.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      right: 37.3%;
+      top: 5px;
+    }
+    a {
+      transition: all 0.2s ease;
+      color: abs.$dark-blue;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 4px;
+        color: black;
+      }
+    }
+  }
+  .login {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+    a {
+      transition: all 0.2s ease;
+      color: abs.$dark-blue;
+      &:hover {
+        text-decoration: none;
+        color: black;
+      }
+    }
+    .active {
+      transition: all 0.2s ease;
+      @include abs.button();
+      &:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 4px;
+        color: black;
+      }
+    }
+  }
+}
+
+main .numbers .vector {
+  opacity: 0.1;
+  position: absolute;
+  right: 70px;
+  top: 15%;
+  z-index: -2;
+}
